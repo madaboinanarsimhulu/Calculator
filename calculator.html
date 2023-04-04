@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      input{
+border-radius: 8px;
+}
+#longbox{
+width:400px;
+height:40px;
+margin-top:20px;
+border-style:solid;
+border-width: 2px;
+background-color:white;
+
+
+}
+#row1{
+width:97px;
+margin-top:15px;
+background-color:gary;
+}
+#row2{
+width:97px;
+margin-top:15px;
+}
+#row3{
+width:97px;
+margin-top:15px;
+}#row4{
+width:97px;
+margin-top:15px;
+}#row5{
+width:97px;
+margin-top:15px;
+}
+    </style>
+  </head>
+  <body>
+    <script>
+      function display()
+      {
+alert("sairam")
+      }
+          </script>
+          <form name="form1">
+          <div class="container" id="sa">
+            <input type="text" id="longbox" value="" name="answer"><br>
+            <input type="button" id="row1" value="(" onclick="form1.answer.value +='(' ">
+            <input type="button" id="row1" value=")" onclick="form1.answer.value +=')' ">
+            <input type="button" id="row1" value="%" onclick="form1.answer.value +='%' ">
+            <input type="button" id="row1" value="Clear All" onclick="form1.answer.value =''"><br>
+            <input type="button" id="row2" value="7"  onclick="form1.answer.value +='7' " style="background-color:white">
+            <input type="button" id="row2" value="8"  onclick="form1.answer.value +='8' " style="background-color:white">
+            <input type="button" id="row2" value="9"  onclick="form1.answer.value +='9' " style="background-color:white">
+            <input type="button" id="row2" value="/"  onclick="form1.answer.value +='/' "><br>
+            <input type="button" id="row3" value="4"  onclick="form1.answer.value +='4' " style="background-color:white">
+            <input type="button" id="row3" value="5"  onclick="form1.answer.value +='5' " style="background-color:white">
+            <input type="button" id="row3" value="6"  onclick="form1.answer.value +='6' " style="background-color:white">
+            <input type="button" id="row3" value="*"  onclick="form1.answer.value +='*' "><br>
+            <input type="button" id="row4" value="1"  onclick="form1.answer.value +='1' " style="background-color:white">
+            <input type="button" id="row4" value="2"  onclick="form1.answer.value +='2' " style="background-color:white">
+            <input type="button" id="row4" value="3"  onclick="form1.answer.value +='3' " style="background-color:white">
+            <input type="button" id="row4" value="-"  onclick="form1.answer.value +='-' "><br>
+            <input type="button" id="row5" value="0"  onclick="form1.answer.value +='0' " style="background-color:white">
+            <input type="button" id="row5" value="."  onclick="form1.answer.value +='.' " style="background-color:white">
+            <input type="button" id="row5" value="="  onclick="form1.answer.value = eval(form1.answer.value)" style="background-color:blue">
+            <input type="button" id="row5" value="+" onclick="form1.answer.value +='+' ">
+          </form>
+  </body>
+</html>
