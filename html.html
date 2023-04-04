@@ -1,0 +1,100 @@
+<html>
+<head>
+<style>
+    div{
+        font-size:20px;
+        color:white;
+        background-color:orange;
+        height:300;
+        width:auto;
+    }
+    input{
+        background-color: orange;
+        width:120px;
+        height:80px;
+        border: 1px solid white;
+        position:relative;
+        left:200px;
+        color:white;
+        font-size: 30;
+
+    }
+    p{
+        position: relative;
+        left:400;
+    }
+</style>
+</head>
+<body>
+    <script>
+    window.onload = function () {
+  
+        var seconds = 00; 
+        var tens = 00; 
+        var appendTens = document.getElementById("tens")
+        var appendSeconds = document.getElementById("seconds")
+        var buttonStart = document.getElementById('button-start');
+        var buttonStop = document.getElementById('button-stop');
+        var buttonReset = document.getElementById('button-reset');
+        var Interval ;
+      
+        buttonStart.onclick = function() {
+          
+          clearInterval(Interval);
+           Interval = setInterval(startTimer, 10);
+        }
+        
+          buttonStop.onclick = function() {
+             clearInterval(Interval);
+        }
+        
+      
+        buttonReset.onclick = function() {
+           clearInterval(Interval);
+          tens = "00";
+            seconds = "00";
+          appendTens.innerHTML = tens;
+            appendSeconds.innerHTML = seconds;
+        }
+        
+         
+        
+        function startTimer () {
+          tens++; 
+          
+          if(tens <= 9){
+            appendTens.innerHTML = "0" + tens;
+          }
+          
+          if (tens > 9){
+            appendTens.innerHTML = tens;
+            
+          } 
+          
+          if (tens > 99) {
+            console.log("seconds");
+            seconds++;
+            appendSeconds.innerHTML = "0" + seconds;
+            tens = 0;
+            appendTens.innerHTML = "0" + 0;
+          }
+          
+          if (seconds > 9){
+            appendSeconds.innerHTML = seconds;
+          }
+        
+        }
+        
+      
+      }
+    </script>
+    <div class="container">
+    <h1><center>STOPWATCH</center></h1>
+    <h1><center>MY JAVASCRIPT STOPWATCH</center></h1>
+    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+    <input type="button" id="button-start" value="start">
+    <input type="button" id="button-stop" value="stop">
+    <input type="button" id="button-reset" value="reset">
+    </div>
+</body>
+</html>
