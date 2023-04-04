@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function display()
+            {
+            var n1=document.form1.name.value;
+            var p1=document.form1.pass.value;
+            if(n1=="")
+            {
+                alert("name not be null")
+            }
+            else if(p1=="")
+            {
+                alert("password not be null")
+            }
+            else if(p1.length<6)
+            {
+                alert("password mim of 6 char")
+            }
+        }
+        </script>
+        <form name="form1" onsubmit="return display()">
+        enter name:<input type="text" name="name"><br><br>
+        enter password:<input type="password" name="pass"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    </body>
+</html>
